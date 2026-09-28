@@ -1,8 +1,3 @@
-from fastapi import FastAPI
+"""ASGI entry point: ``uv run uvicorn main:app``."""
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+from patch_engine.api import app  # noqa: F401
